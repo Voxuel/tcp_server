@@ -1,7 +1,8 @@
 import socket
+import sys
 
-HOST = "127.0.0.1"
-PORT = 65432
+HOST = sys.argv[1]
+PORT = sys.argv[2]
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as soc:
     soc.bind((HOST, PORT))
